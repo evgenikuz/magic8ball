@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="title">Шар-предсказатель</h1>
+    <div class="magic_ball">
+        <img class = 'ball' src="./img/ball.jpeg">
+        <img class = 'answer' src="./img/answer.png">
+        <p class="answer_text">Задайте мне вопрос</p>
+    </div>
+
+    <label for="question">Введите вопрос, на который шар сможет дать вам ответ "Да" или "Нет"</label> 
+    <input class = 'field' id='question' placeholder = 'Ваш вопрос' type="text">
+    <input id='shake-btn' type="submit" value='Потрясти шар'></input>
+    <script src="script.js"></script>
+</body>
+</html>

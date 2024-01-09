@@ -1,0 +1,129 @@
+* {
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 20px;
+}
+@font-face {
+    font-family: 'Zlusa';
+    src: url("./fonts/Zlusa_font.ttf") format("truetype");
+    font-style: normal; 
+    font-weight: normal; 
+}
+body {
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 700px;
+    margin: 0 20px;
+}
+.title {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+.ball {
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgb(105, 105, 255);
+    object-fit: cover;
+}
+.magic_ball {
+    position: relative;
+    display: flex;
+    width:fit-content;
+    border-radius: 50%;
+}
+@keyframes shake-ball {
+    0% { transform: translate(1px, 1px); }
+    33% { transform: translate(-1px, 1px); }
+    66% { transform: translate(-1px, -1px); }
+    100% { transform: translate(1px, -1px); }
+}
+  
+.magic_ball:hover {
+    animation: shake-ball .1s 5 alternate;
+}
+.shake-ball-animation {
+    animation: shake-ball .1s 5 alternate;
+}
+label {
+    margin-top: 20px;
+    color: white;
+}
+
+.answer {
+    position: absolute;
+    top: 28%;
+    height: 190px;
+    z-index: 1;
+    left: 50%;
+    object-fit: cover;
+    transform: translateX(-50%);
+}
+.answer_text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    color:white;
+    font-family: 'Zlusa', sans-serif;
+    font-size: 25px;
+    max-width: 95px;
+    text-align: center;
+    margin: 0px;
+}
+
+.field {
+    width: 100%;
+    max-width: 400px;
+    transition: 0.2s;
+    border: 0;
+    border-radius: 6px;
+    padding-left: 4px;
+}
+.field:hover {
+    transform: scale(1.05);
+}
+
+#shake-btn {
+    font-size: 30px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    max-width: fit-content;
+    align-self: center;
+    border: solid 1px darkblue;
+    background-color: rgb(31, 31, 159);
+    border-radius: 10px;
+}
+#shake-btn:hover {
+    box-shadow:inset 2px 2px 10px rgb(105, 105, 255);;
+}
+#shake-btn:active {
+    box-shadow:inset 2px 2px 10px rgb(105, 105, 255);;
+    background-color: rgb(14, 14, 66);
+
+}
+@media (max-width: 450px) {
+    .magic_ball .ball{
+        max-width: 400px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .magic_ball .answer {
+        height:48%;
+    }
+    .answer_text {
+        font-size: 20px;
+        max-width: 70px;
+    }
+    .field {
+        align-self: stretch;
+    }
+    #shake-btn {
+        align-self: stretch;
+        max-width: none;
+    }
+    
+}
