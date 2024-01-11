@@ -24,7 +24,7 @@ let answerBall = () => {
         setTimeout(() => answer.textContent = (answerArray[Math.floor(Math.random() * answerArray.length)]), 500)
         ball.classList.add('shake-ball-animation')
     } else {
-        answer.textContent = "Sorry, I don't speak English"
+        answer.textContent = "Введите вопрос на русском"
     }
     input.value = ''
     setTimeout(() => ball.classList.remove('shake-ball-animation'), 600)
